@@ -45,12 +45,29 @@ docker exec -it [CONTAINER_ID] bash
 
 ## General commands (from kafka container)
 
-| Purpose | Command |
-|-----------------------|-------------|
-| `Create new topic` | opt/kafka_2.13-2.8.1/bin/kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor [NUM_REPLICATION_FACTOR] --partitions [NUM_PARTITIONS] --topic [TOPIC_NAME] |
-| `Describe topic` | opt/kafka_2.13-2.8.1/bin/kafka-topics.sh --zookeeper localhost:2181 --topic [TOPIC_NAME] |
-| `Delete a topic` | opt/kafka_2.13-2.8.1/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic [TOPIC_NAME] |
-| `Change topic's partitions` | opt/kafka_2.13-2.8.1/bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic [TOPIC_NAME] --partitions [NEW_NUM_PARTITIONS] |
+### Create new topic
+
+```bash
+opt/kafka_2.13-2.8.1/bin/kafka-topics.sh --create --zookeeper zookeeper:2181 --replication-factor [NUM_REPLICATION_FACTOR] --partitions [NUM_PARTITIONS] --topic [TOPIC_NAME]
+```
+
+### Describe topic
+
+```bash
+opt/kafka_2.13-2.8.1/bin/kafka-topics.sh --zookeeper localhost:2181 --topic [TOPIC_NAME]
+```
+
+### Delete a topic
+
+```bash
+opt/kafka_2.13-2.8.1/bin/kafka-topics.sh --zookeeper localhost:2181 --delete --topic [TOPIC_NAME]
+```
+
+### Change topic's partitions
+
+```bash
+opt/kafka_2.13-2.8.1/bin/kafka-topics.sh --zookeeper localhost:2181 --alter --topic [TOPIC_NAME] --partitions [NEW_NUM_PARTITIONS] 
+```
 
 ## Stop Solution
 
